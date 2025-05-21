@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("./bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 600px;
+  grid-template-rows: auto 1fr;
+  column-gap: 20px;
+}
+
+.logo {
+  margin-left: 140px;
+  margin-top: 50px;
+}
+
+.hero-desktop {
+  background-image: url(./hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.form h1 {
+  font-size: 5rem;
+  margin-left: 140px;
+  margin-top: 100px;
+  letter-spacing: 5px;
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.form h1 span {
+  color: black;
+  font-weight: 600;
+}
+
+.para {
+  margin-left: 140px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: -50px;
+  word-spacing: 6px;
+  margin-bottom: 40px;
+  color: hsl(0, 36%, 70%);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-left: 140px;
+  max-width: 400px;
+  position: relative;
+}
+
+input {
+  flex: 1;
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: 1px solid hsl(0, 36%, 70%);
+  font-size: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+button {
+  position: absolute;
+  right: 0;
+  padding: 25px 40px;
+  background-color: hsl(0, 93%, 68%);
+  border: none;
+  border-radius: 50px;
+  background-image: url(./icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.errorImg {
+  background-image: url(./icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  background-size: 20px; /* adjust if needed */
+  padding-left: 50px;     /* add space so text doesn't overlap the icon */
+}
+
+
+.message {
+  font-size: 14px;
+  margin-right: 38px;
+}
+
+.message.success {
+  color: hsl(0, 36%, 70%);
+}
+
+.message.error {
+  color: red;
+  text-align: justify;
+}
+
+
+
+@media(500px <= width <= 700px) {
+    .logo{
+        margin-left: 20px;
+    }
+     
+    .form h1 {
+        margin-left: 20px;
+    }
+
+    .para{
+        margin-left: 20px;
+    }
+    
+    form {
+        margin-left: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px auto;
+    padding-left: 0;
+    height: auto;
+  }
+
+  .hero-desktop {
+    background-image: url(./hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .logo {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  .form {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .form h1 {
+    font-size: 3rem;
+    margin: 40px 0 70px;
+    margin-left: 0;
+  }
+
+  .para {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  form {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  button {
+    right: 0px;
+    top: 0px;
+  }
+
+  .attribution {
+    margin-top: 50px;
+  }
+
+    .message {
+    margin-left: 0px;
+    margin-right: 20px;
+    text-align: center;}
+
+
+}
